@@ -17,6 +17,7 @@ int sleep_ms(int ms) {
 const char * getAnswer() {
     int selection = getRandomNumber(-1,18);
     const int length = getRandomNumber(45,75);
+    const int lenMinusOne = length - 1;
     int sleepTime = 10;
     char * answer;
     char answerArray[20][BUF] = {
@@ -48,7 +49,7 @@ const char * getAnswer() {
             selection = 0;
         }
 
-        if (i != length - 1) {
+        if (i != lenMinusOne) {
             printf("%s\n", answerArray[selection]);
             sleep_ms(sleepTime);
             sleepTime = sleepTime + 5;
