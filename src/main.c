@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
-#include "randNumGen.c"
+#include "randNumGen.h"
 
 #define BUF 50
 
