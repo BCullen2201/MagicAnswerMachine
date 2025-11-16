@@ -15,7 +15,7 @@ int sleep_ms(int ms) {
 }
 
 const char * getAnswer() {
-    int selection = getRandomNumber(0,19);
+    int selection = getRandomNumber(-1,18);
     const int length = getRandomNumber(45,75);
     int sleepTime = 10;
     char * answer;
@@ -42,9 +42,6 @@ const char * getAnswer() {
         {"They're saying yes"}
     };
 
-    if (selection == 19) {
-        selection--;
-    }
     for (int i = 0; i < length; i++) {
         selection++;
         if (selection > 19) {
