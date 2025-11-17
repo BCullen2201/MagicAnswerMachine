@@ -60,7 +60,7 @@ int main() {
         answer[j] = answerArray[selection][j];
     }
 
-    printf("%s\n\n", answer);
+    printf("%s\n\n\a", answer);
 
     return 0;
 }
