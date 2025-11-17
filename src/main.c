@@ -7,20 +7,16 @@
 
 #define BUF 50
 
-struct answerString {
-    char string[BUF];
-};
-
 int sleep_ms(int ms) {
     usleep(ms * 1000);
 }
 
-const char * getAnswer() {
+int main() {
     int selection = getRandomNumber(-1,18);
     const int length = getRandomNumber(45,75);
     const int lenMinusOne = length - 1;
     int sleepTime = 10;
-    char * answer;
+    char answer[BUF];
     char answerArray[20][BUF] = {
         {"Yep, definitely"},
         {"Not sure, try again"},
@@ -44,6 +40,7 @@ const char * getAnswer() {
         {"They're saying yes"}
     };
 
+
     for (int i = 0; i < length; i++) {
         selection++;
         if (selection > 19) {
@@ -59,15 +56,11 @@ const char * getAnswer() {
         system("clear");
     }
 
-    answer = answerArray[selection];
-    return answer;
-}
+    for (int j = 0; j < BUF; j++) {
+        answer[j] = answerArray[selection][j];
+    }
 
-int main() {
-    struct answerString s1;
-    strcpy(s1.string, getAnswer());
-
-    printf("%s\n\n", s1.string);
+    printf("%s\n\n", answer);
 
     return 0;
 }
