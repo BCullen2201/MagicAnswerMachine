@@ -40,7 +40,6 @@ int main() {
         {"They're saying yes"}
     };
 
-
     for (int i = 0; i < length; i++) {
         selection++;
         if (selection > 19) {
