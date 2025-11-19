@@ -5,7 +5,7 @@
 
 #include "randNumGen.h"
 
-#define BUF 50
+#define BUF 30
 
 int sleep_ms(int ms) {
     usleep(ms * 1000);
