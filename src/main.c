@@ -7,7 +7,7 @@
 
 #define BUF 30
 
-int sleep_ms(int ms) {
+void sleep_ms(int ms) {
     usleep(ms * 1000);
 }
 
