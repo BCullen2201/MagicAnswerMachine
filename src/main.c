@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "randNumGen.h"
+#include "randNumGen.c"
 
 #define BUF 30
 
