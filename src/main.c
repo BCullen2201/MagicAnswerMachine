@@ -17,7 +17,7 @@ int main() {
     const int lenMinusOne = length - 1;
     int sleepTime = 10;
     char answer[BUF];
-    char answerArray[20][BUF] = {
+    const char answerArray[20][BUF] = {
         {"Yep, definitely"},
         {"Not sure, try again"},
         {"Don't rely on it"},
