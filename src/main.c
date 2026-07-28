@@ -16,7 +16,6 @@ int main() {
     const int length = getRandomNumber(45,75);
     const int lenMinusOne = length - 1;
     int sleepTime = 10;
-    char answer[BUF];
     const char answerArray[20][BUF] = {
         {"Yep, definitely"},
         {"Not sure, try again"},
@@ -55,11 +54,7 @@ int main() {
         system("clear");
     }
 
-    for (int j = 0; j < BUF; j++) {
-        answer[j] = answerArray[selection][j];
-    }
-
-    printf("%s\n\n\a", answer);
+    printf("%s\n\n\a", answerArray[selection]);
 
     return 0;
 }
